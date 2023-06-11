@@ -46,7 +46,7 @@ async function sendMail(htmlTable) {
 
     transporter.sendMail({
         from: 'theo.flutter@gmail.com',
-        to: ['theolpy@gmail.com', 'theo.flutter@gmail.com'],
+        to: ['theolpy@gmail.com', 'cathylilingwai@gmail.com'],
         subject: '0388',
         html: htmlTable,});
 
