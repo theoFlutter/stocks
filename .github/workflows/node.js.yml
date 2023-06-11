@@ -21,10 +21,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      #Python Steps
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+        
+    - name: Install python
+      run:  pip install -r requirement.txt
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+         
     - run: npm i
     - run: npm start
